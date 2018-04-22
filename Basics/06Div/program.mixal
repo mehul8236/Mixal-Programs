@@ -1,0 +1,12 @@
+* This program devides 2 values
+
+	ORIG	2000
+START	CON	5000(0:3)		M[2000] <- +01 14 08 00 00
+	CON	50			M[2001] <- +00 00 00 00 50
+
+	LDX	2000(0:3)		rX	<- +00 00 01 14 08
+	DIV	2001			rAX	<- rAX / V of M[2001]
+
+	STA	*			Store rA to current memory address
+
+	END	START

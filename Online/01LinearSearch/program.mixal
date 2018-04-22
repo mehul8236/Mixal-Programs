@@ -1,0 +1,18 @@
+* This program shows how to implement the linear search.
+
+	ORIG	2000
+ARRAY	CON	7
+	CON 	3
+	CON	6
+	CON	1
+*
+	LDA	=6=
+*
+1H	CMPA	ARRAY,1
+	JE	EXT
+	INC1	1
+	JMP	1B
+*
+EXT	LDA	*
+	STA	1999
+	END	2000

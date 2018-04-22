@@ -1,0 +1,8 @@
+* This program shows how to compare two values
+
+	ORIG	2000
+START	CON 	201(4:5)		M[2000] <- +00 00 00 03 08
+	ENTA	200			rA 	<- +00 00 00 03 08
+
+	CMPA	2000			Compare rA to V of M[2000]
+	END	START

@@ -1,0 +1,6 @@
+* This program shows how to use a literal sybol
+
+	ORIG	2000
+ST	LDA	=*+20=		The litaral symbols will be plaed after the program END
+	LDX	=*-20=
+	END	ST

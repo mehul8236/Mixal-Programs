@@ -1,0 +1,14 @@
+* This program shows how to use Subrouine
+*
+	ORIG	2000
+	CON 	24
+	CON	42
+	JMP	MAXIMUM
+	LDA	=23=
+	CMP1	=50=
+	JE	ED
+MAXIMUM	STJ	EXIT
+	LD1	=50=
+EXIT	JMP	*
+ED	END	2000
+

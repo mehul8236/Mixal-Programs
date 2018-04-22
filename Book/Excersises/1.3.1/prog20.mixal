@@ -1,0 +1,8 @@
+* This program sets the rJ to the value (N) of rI4, where 0 < N < 3000
+* I can't do it! :(
+	ORIG	3000
+SRT	LD4	=2000=
+	ST4	*
+	JMP	*-1
+	STA	0,4	
+	END	SRT	

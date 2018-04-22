@@ -1,0 +1,7 @@
+* The program shows how to store data
+
+	ORIG	2000
+START	CON	3000
+	LDA	2000
+	STA	1999
+	END	START

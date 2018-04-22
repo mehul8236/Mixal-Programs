@@ -1,0 +1,12 @@
+* The program shows how to add 2 integers.
+
+	ORIG	2000
+START	CON	3000		M[2000] <- 3000
+	CON	7000		M[2001] <- 7000
+
+	LDA	2000		rA <- 3000
+	ADD	2001		rA <- rA + V of M[2001]
+
+	STA	*		Store rA to current memory address
+
+	END	START

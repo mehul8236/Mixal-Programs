@@ -1,0 +1,7 @@
+* This shows how to use Jump Register.
+*
+	ORIG	2000
+	JMP	2001
+MAX	STJ	EXIT
+	LDA	=200=
+EXIT	END	2000

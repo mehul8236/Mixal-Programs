@@ -1,0 +1,19 @@
+*This program is an Euclid's gratest common divisor finding algorithm.
+* Author: Mehul Katpara
+* Page: 02
+*
+	ORIG	2000
+M	CON	55
+N	CON	10
+1H	LDX	M
+	DIV	N
+	CMPX	=0=
+	JE	EXT
+	LDA	N
+	STA	M
+	LDA	0
+	STX	N
+	JMP	1B	
+EXT	LDA	N
+	STA	*
+	END	2000

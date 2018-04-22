@@ -1,0 +1,10 @@
+* Thi program shows how to use local symbol
+*
+	ORIG	2000
+2H	CON	234(1:2)
+	LDA	2B
+	LDA	2F
+2H	CON	456(1:2)
+	LDA	2B
+	END	2000
+

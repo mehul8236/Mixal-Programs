@@ -1,0 +1,14 @@
+* This program shows the Jump operations
+
+	ORIG	2000
+START	CON	200(4:5)	
+	ENTA	210
+
+CMPR	CMPA	2000
+	JE	STOP			If rA = V of M[2000], go to end
+	JG	DEC			Jump to dec section
+	INCA	1
+	JMP	CMPR			Jump to compare
+DEC	DECA	1
+	JMP	CMPR			Jump to compare
+STOP	END 	START

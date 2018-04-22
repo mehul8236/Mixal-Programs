@@ -1,0 +1,29 @@
+* This program creates a Fibonacci Sequance.
+*	AUTHOR: MEHUL KATPARA
+*
+BUFFER	EQU	1900		CREATES A BUFFER OF 100 WORDS
+ST	ORIG 	2000		
+*
+*	INITIALIZATION
+*
+X	CON	0		X
+Y	CON	1		Y
+	LD1	=0=		N
+*
+*	LOOP GENERATES 20 FIBONACCI NUMBERS
+*
+LOOP	CMP1	=20=			
+	JE	EXIT		IF N = 20, EXIT THE PROGRAM
+	LDA	X		rA 		<- X
+	ADD	Y		M 	= rA 	<- X + Y
+	STA	BUFFER,1	BUFFER[N]	<- M
+	LDA	Y		
+	STA	X		Y 		<- X
+	LDA	BUFFER,1	
+	STA	Y		Y		<- M
+	INC1	1		N		<- N + 1
+	JMP	LOOP			
+*
+*	END OF THE PROGRAM
+*
+EXIT	END	ST

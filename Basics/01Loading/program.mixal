@@ -1,0 +1,6 @@
+* This is just loading operations.
+
+	ORIG	2000
+START	CON	3000
+	LDA	2000
+	END 	START

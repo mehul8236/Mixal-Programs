@@ -1,0 +1,20 @@
+* This program sets memory cell 0 - 99 all zeros.
+* The program works faster when the number of CON is SQRT of given elements.
+* So 0 - 99 => 100 Elelments, so the fastest execution would be to have 10 CONs, and 10 repeats.
+
+	ORIG	100
+DATA	CON	20
+	CON	21
+	CON	22
+	CON	24
+	CON	25
+	CON	26
+	CON	27
+	CON	28
+	CON	29
+	CON	30
+LOOP	CMP1	=100=
+	JE	EXIT
+	MOVE	DATA(10)	MOVES 10 WORDS FROM THE DATA, TO THE ADDRESS OF rI1
+	JMP	LOOP	
+EXIT	END	100

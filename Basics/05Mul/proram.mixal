@@ -1,0 +1,12 @@
+* This program multiplies 2 values
+
+	ORIG	2000
+START	CON	100(1:2)		M[2000] <- +01 36 00 00 00
+	CON	200(1:2)		M[2001] <- +03 08 00 00 00
+
+	LDA	2000(0:2)		rA <- +00 00 00 01 36
+	MUL	2001(0:2)		rAX <- rA * V(0:2) of M[2001]
+
+	SLAX	5
+	STA	*			Store rX to current memory
+	END	START

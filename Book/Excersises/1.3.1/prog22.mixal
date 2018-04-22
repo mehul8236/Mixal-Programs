@@ -1,0 +1,19 @@
+* The program calculates the X^13 at the memory location 2000
+*	
+	ORIG	2000
+X	CON	2		X <- 2
+	ORIG	3000
+START	LDA	X(5:5)		Load rA with M[2000]
+STRA	STA	*		Store ra to M[3001]
+*
+*	LOOP RUNS 13 TIMES
+*
+LOOP	MUL	STRA		MULIPLY current rA with STRA value
+	SLC	5		Shift left, so rA <- rX
+	INC1	1		Increase loop counter by 1
+	CMP1	=12=		Cmpare if the loop counter is 12
+	JL	LOOP		If not keep looping
+*
+*	EXIT THE PROGRAM AFTER 13 LOOPS
+*
+	END	START

@@ -1,0 +1,11 @@
+* The program subtracts two values
+
+	ORIG	2000
+START	CON	7000		M[2000]	<- 7000
+	CON	4000		M[2001]	<- 4000
+
+	LDA	2000		rA <- V of M[2000]
+	SUB	2001		rA <- rA - V of M[2001]
+
+	STA	*		Store rA to current memory address
+	END	START

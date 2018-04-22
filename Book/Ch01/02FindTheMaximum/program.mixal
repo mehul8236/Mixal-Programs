@@ -1,0 +1,35 @@
+* This progra finds the maximum in the list
+* X = Array and elements = 10, 
+* therefore n = 9, where X[n] = X[0]...X[9]
+	ORIG	2000
+X	CON	20
+	CON	46
+	CON	97
+	CON	58
+	CON	92
+	CON	16
+	CON	78
+	CON 	92
+	CON	73
+	CON	64
+*
+*	START PROGRAM
+*
+J	LD1	=9=		rI1 	<- 10 
+K	ENT2	-1,1		rI2	<-  9   ( Load content of rI1 and remove 1)
+	LDA	X,1		rA	<- X[n]
+*
+*	LOOP TO FIND MAXIMUM
+*
+LOOP	CMP2	=0=		if K = 0, exit
+	JE	EXIT
+	CMPA	X,2		
+	JGE	2F		if rA =< X[K], go to 2H
+	ENT1	0,2		J <- K
+	LDA	X,2		rA <- X[k]
+2H	DEC2	1		K <- K - 1
+	JMP	LOOP		
+*
+*	EXIT WHEN PROGRAM FINDS THE MAXIMUM
+*
+EXIT	END	2000	
